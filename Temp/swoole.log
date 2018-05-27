@@ -1,0 +1,18 @@
+[2018-05-19 10:11:22 $2510.0]	NOTICE	Server is reloading now.
+[2018-05-19 10:11:22 $2510.0]	NOTICE	Server is reloading now.
+[2018-05-19 13:23:52 *3049.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Cannot declare class App\HttpController\Login, because the name is already in use in /media/sf_www/es-admin/App/HttpController/Admin/Login.php on line 54.
+[2018-05-19 13:23:52 $3037.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2018-05-19 13:25:56 *3075.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Cannot declare class App\HttpController\Login, because the name is already in use in /media/sf_www/es-admin/App/HttpController/Admin/Login.php on line 54.
+[2018-05-19 13:25:56 $3063.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2018-05-19 13:28:52 *3102.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Cannot declare class App\HttpController\Login, because the name is already in use in /media/sf_www/es-admin/App/HttpController/Admin/Login.php on line 53.
+[2018-05-19 13:28:52 $3090.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2018-05-19 13:30:15 *3103.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Class 'App\HttpController\Admin\ViewController' not found in /media/sf_www/es-admin/App/HttpController/Admin/Login.php on line 7.
+[2018-05-19 13:30:15 $3090.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2018-05-19 13:30:21 *3125.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Class 'App\HttpController\Admin\ViewController' not found in /media/sf_www/es-admin/App/HttpController/Admin/Login.php on line 7.
+[2018-05-19 13:30:21 $3113.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2018-05-19 13:30:25 *3126.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Class 'App\HttpController\Admin\ViewController' not found in /media/sf_www/es-admin/App/HttpController/Admin/Login.php on line 7.
+[2018-05-19 13:30:25 $3113.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2018-05-19 13:30:29 *3132.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Class 'App\HttpController\Admin\ViewController' not found in /media/sf_www/es-admin/App/HttpController/Admin/Login.php on line 7.
+[2018-05-19 13:30:29 $3113.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2018-05-19 18:57:01 *24800.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Cannot declare class App\HttpController\Admin\Index, because the name is already in use in /media/sf_www/es-admin/App/HttpController/Admin/Menu.php on line 18.
+[2018-05-19 18:57:01 $24788.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
