@@ -88,12 +88,17 @@ class Admin extends BasicAdmin {
             $sysUser = new SystemUser();
             $postData = $this->request()->getQueryParams();
             if($postData){
-                if($sysUser->forbid($postData)){
-                    $this->ajax(1,"操作成功",'','/admin/admin/user');
+                $this->session()->sessionStart();
+                $user = $this->session()->get(SysConst::COOKIE_USER_SESSION_NAME);
+                if($user['id']==$postData['id']){
+                    $this->ajax(0,"不能操作自己的账号，操作失败");
                 }else{
-                    $this->ajax(0,"操作失败");
+                    if($sysUser->forbid($postData)){
+                        $this->ajax(1,"操作成功",'','/admin/admin/user');
+                    }else{
+                        $this->ajax(0,"操作失败");
+                    } 
                 } 
-               
             }else{
                 $this->ajax(0,"操作失败");
             } 
