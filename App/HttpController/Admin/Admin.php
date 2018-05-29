@@ -52,9 +52,7 @@ class Admin extends BasicAdmin {
                 } 
             }else{
                 $this->ajax(0,"请求数据为空",'','/admin/admin/user');
-            }
-            
-            $this->ajax(1,"信息更新成功",'','/admin/system/config');
+            } 
         } 
     }
 
