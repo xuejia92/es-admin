@@ -89,8 +89,7 @@ class Admin extends BasicAdmin {
             $postData = $this->request()->getQueryParams();
             if($postData){ 
                 $this->session()->sessionStart();
-                $user = $this->session()->get(SysConst::COOKIE_USER_SESSION_NAME);
-                var_dump($user);
+                $user = $this->session()->get(SysConst::COOKIE_USER_SESSION_NAME); 
                 if($user['id']==$postData['id']){
                     $this->ajax(0,"不能操作自己的账号，操作失败");
                 }else{
