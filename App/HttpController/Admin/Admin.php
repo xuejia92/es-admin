@@ -63,7 +63,7 @@ class Admin extends BasicAdmin {
             $sysUser = new SystemUser();
             $postData = $this->request()->getParsedBody();
             if($postData){
-                if($postData['password']!=$postData['repossward']){
+                if($postData['password']!=$postData['repassword']){
                     $this->ajax(0,"两次密码输入不一致");
                 }else{
                     if($sysUser->pass($postData)){
