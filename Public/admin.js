@@ -79,8 +79,7 @@ function confirmMsg(url,title){
                     time:2000
                 });
             }
-          },'json');
-        layer.msg('的确很重要', {icon: 1});
+          },'json'); 
       });
 }
 
