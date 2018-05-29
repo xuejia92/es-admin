@@ -37,10 +37,9 @@ class Login extends ViewController
      */
     public function out()
     {
-//        session('user') && LogService::write('系统管理', '用户退出系统成功');
-        !empty($_SESSION) && $_SESSION = [];
-        [session_unset(), session_destroy()];
-        $this->success('退出登录成功！', 'admin/login');
+        $this->session()->sessionStart();
+        $this->session()->set(SysConst::COOKIE_USER_SESSION_NAME,null);
+        $this->response()->redirect('/admin/login/index');
     }
 
     public function ajax($state=1,$msg='成功',$data=[],$redirect_url="/",$time_out=2){
