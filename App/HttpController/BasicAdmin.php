@@ -19,8 +19,10 @@ class BasicAdmin extends ViewController
     protected function onRequest($action): ?bool
     {
         $this->session()->sessionStart();
-        $session = $this->session()->get(SysConst::COOKIE_USER_SESSION_NAME); 
-        $this->response()->write($session);
+        $session = $this->session()->get(SysConst::COOKIE_USER_SESSION_NAME);  
+
+        $rre = $this->session()->set('aaa',['fdsfd'=>9999,'fdsaf'=>666]);  
+        var_dump($this->session()->set('aaa'));
         if (!$session) {
             $this->response()->redirect('/admin/login/index');
             return false;
