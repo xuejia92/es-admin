@@ -68,7 +68,7 @@ class SystemUser extends Model {
         }
     }
 
-    public function delete($postData) {
+    public function del($postData) {
         $data=[];
         $data['is_deleted']   = $postData['is_deleted'];  
         $res = $this->where("id",$postData['id'])->update($data);

@@ -112,7 +112,7 @@ class Admin extends BasicAdmin {
                 if($user['id']==$postData['id']){
                     $this->ajax(0,"不能删除自己，操作失败");
                 }else{
-                    if($sysUser->delete($postData)){
+                    if($sysUser->del($postData)){
                         $this->ajax(1,"操作成功",'','/admin/admin/user');
                     }else{
                         $this->ajax(0,"操作失败");
