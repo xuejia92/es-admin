@@ -28,7 +28,7 @@ class Layer extends ViewController {
         $getData = $this->request()->getQueryParams();
         $id = $getData['id'];
         if($id){
-            $result = $sysUser->field('username')->find($id);
+            $result = $sysUser->find($id);
             $this->fetch('admin/layer/pass',['result'=>$result]);
         }else{
             $this->response()->withStatus(404);
