@@ -59,14 +59,16 @@
                         icon:1,
                         time:1000
                     },function () {
+                        parent.layer.close(parentIndex);
                         parent.location.href = response.url;
                     });
                 }else{
                     layer.msg(response.msg,{
                         icon:2,
                         time:2000
-                    });
-                    parent.layer.close(parentIndex); 
+                    },function(){
+                        parent.layer.close(parentIndex);
+                    }); 
                 }
             },'json');
         });
