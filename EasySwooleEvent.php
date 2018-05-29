@@ -36,6 +36,7 @@ Class EasySwooleEvent implements EventInterface {
     public static function mainServerCreate(ServerManager $server,EventRegister $register): void
     {
         ProcessManager::getInstance()->addProcess('autoReload', Inotify::class); 
+        
     }
 
     public static function onRequest(Request $request,Response $response): void
