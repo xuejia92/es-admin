@@ -54,6 +54,7 @@
         var parentIndex = parent.layer.getFrameIndex(window.name); //获取窗口索引
         $('form').submit(function () {
             $.post('/admin/admin/edit',fromToJson($('form')),function (response) {
+                consoel.log(response);
                 if(response.code==1){
                     layer.msg(response.msg,{
                         icon:1,
