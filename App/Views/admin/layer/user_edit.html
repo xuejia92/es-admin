@@ -62,11 +62,11 @@
                         parent.location.href = response.url;
                     });
                 }else{
-                    layer.close(parentIndex);
                     layer.msg(response.msg,{
                         icon:2,
                         time:2000
                     });
+                    parent.layer.close(parentIndex); 
                 }
             },'json');
         });
