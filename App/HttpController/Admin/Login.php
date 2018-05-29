@@ -24,7 +24,11 @@ class Login extends ViewController
             $loginRes = $systemUser->checkLogin($username,$password);
             if($loginRes[0]){
                 $this->session()->sessionStart();
-                $this->session()->set(SysConst::COOKIE_USER_SESSION_NAME,$loginRes[2]);
+                $saveSession = [
+                    'id'=>$loginRes[2]->id,
+                    'username'=>$loginRes[2]->username
+                ];
+                $this->session()->set(SysConst::COOKIE_USER_SESSION_NAME,saveSession);
                 $this->ajax(1,$loginRes[1],'','/admin/index/index');
             }else{
                 $this->ajax(0,$loginRes[1]);
