@@ -30,7 +30,7 @@ class SystemUser extends Model {
         $this->where(['id' => $user['id']])->update($data);
 
 //        LogService::write('系统管理', '用户登录系统成功');
-        return Helper::returnBoolWithMsg(true,'登录成功，正在进入系统...',$user);
+        return Helper::returnBoolWithMsg(true,'登录成功，正在进入系统...',(array)$user);
     }
 
     public function editUser($postData) {
