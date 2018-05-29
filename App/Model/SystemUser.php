@@ -34,7 +34,16 @@ class SystemUser extends Model {
     }
 
     public function editUser($postData) {
-         
+         $data=[];
+         $data['phone']=$postData['phone'];
+         $data['mail']=$postData['mail'];
+         $data['desc']=$postData['desc'];
+         $res = $this->where("id=".$postData['id'])->save($data);
+         if(false !== $res){
+            return true;
+         }else{
+             return false;
+         }
     }
 
 }
