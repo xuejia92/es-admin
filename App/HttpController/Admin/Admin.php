@@ -48,7 +48,7 @@ class Admin extends BasicAdmin {
                 if($sysUser->editUser($postData)){
                     $this->ajax(1,"请求数据为空",'','/admin/admin/user');
                 }else{
-                    $this->ajax(0,"更新数据失败 ",'','/admin/admin/user');
+                    $this->ajax(0,"更新数据失败",'','/admin/admin/user');
                 } 
             }else{
                 $this->ajax(0,"请求数据为空",'','/admin/admin/user');

@@ -87,7 +87,7 @@
 
 					{if auth("$classuri/edit")}
 					<span class="text-explode">|</span>
-					<a data-title="编辑用户" class="editUserOpen">编辑</a>
+					<a data-title="编辑用户" onclick='editOpen("用户编辑","/admin/layer/user_edit?id={$vo.id}")'>编辑</a>
 					{/if}
 
 					{if auth("$classuri/auth")}
@@ -164,10 +164,7 @@
 					//请求异常回调
 				}
 			});
-
-			$('.editUserOpen').click(function () {
-			    editOpen("用户编辑",'/admin/layer/user_edit')
-            });
+ 
 		});
 	</script>
 {/block}
