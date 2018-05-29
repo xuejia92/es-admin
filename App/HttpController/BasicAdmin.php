@@ -43,7 +43,8 @@ class BasicAdmin extends ViewController
         $this->response()->end();
     }
 
-    public function _list($db,$where,$result=[]){
+    public function _list($db,$where){
+        $result=[];
         $result['total'] = $db->select();
         $result['list'] = $db->where($where)->select();
         return $result;
