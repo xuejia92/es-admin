@@ -50,13 +50,13 @@ function formToJson($form) {
     return o;
 }
 
-function editOpen(title,$formHtml){
+function editOpen(title,$formHtml,area=['800px', '500px']){
     var index=layer.open({
         type: 2,
         title: title,
         shadeClose: true,
         shade: 0.8,
-        area: ['800px', '500px'],
+        area: area,
         content: $formHtml
     });
 }
