@@ -61,3 +61,26 @@ function editOpen(title,$formHtml,area=['800px', '500px']){
     });
 }
 
+function confirmMsg(url,title){
+    layer.confirm(title, {
+        btn: ['确认','取消'] //按钮
+      }, function(){
+          $.get(url,function(response){
+            if(response.code==1){
+                layer.msg(response.msg,{
+                    icon:1,
+                    time:1000
+                },function () {
+                    window.location.href = response.url;
+                });
+            }else{
+                layer.msg(response.msg,{
+                    icon:2,
+                    time:2000
+                });
+            }
+          },'json');
+        layer.msg('的确很重要', {icon: 1});
+      });
+}
+

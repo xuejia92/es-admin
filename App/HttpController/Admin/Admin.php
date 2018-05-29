@@ -13,6 +13,7 @@ class Admin extends BasicAdmin {
     function user() {
         if (!$this->request()->getParsedBody()) {
             $where = [];
+            $where['is_deleted'] = 0;
             $get = $this->request()->getQueryParams();
             foreach (['username', 'phone', 'mail'] as $key) {
                 if(isset($get[$key]) && $get[$key] !== '') {
@@ -75,6 +76,25 @@ class Admin extends BasicAdmin {
                
             }else{
                 $this->ajax(0,"请求数据为空");
+            } 
+        } 
+    }
+
+    public function forbid(){
+        if (!$this->request()->getQueryParams()) {
+            $this->ajax(0,"非法请求");
+        }else{
+            $sysUser = new SystemUser();
+            $postData = $this->request()->getQueryParams();
+            if($postData){
+                if($sysUser->forbid($postData)){
+                    $this->ajax(1,"操作成功",'','/admin/admin/user');
+                }else{
+                    $this->ajax(0,"操作失败");
+                } 
+               
+            }else{
+                $this->ajax(0,"操作失败");
             } 
         } 
     }

@@ -57,4 +57,15 @@ class SystemUser extends Model {
         }
    }
 
+   public function forbid($postData) {
+    $data=[];
+    $data['status']   = $postData['status']; 
+    $res = $this->where("id",$postData['id'])->update($data);
+    if(false !== $res){
+       return true;
+    }else{
+        return false;
+    }
+}
+
 }
