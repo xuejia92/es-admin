@@ -1,5 +1,5 @@
 {include file="public/header"/}
-<form class="layui-form layui-box modal-form-box" action="/admin/admin/edit" data-auto="true" method="post">
+<form class="layui-form layui-box modal-form-box" action="/admin/admin/edit" onsubmit="return false;" data-auto="true" method="post">
     <div class="layui-form-item">
         <label class="layui-form-label">用户账号</label>
         <div class="layui-input-block">
@@ -35,10 +35,10 @@
     <div class="hr-line-dashed"></div>
     <div class="layui-form-item text-center">
         <input type="hidden" value="10000" name="id" />
-        <button class="layui-btn" type="submit">保存数据</button>
+        <button class="layui-btn" type="submit" id='submit'>保存数据</button>
         <button class="layui-btn layui-btn-danger" type="button" id="close" data-confirm="确定要取消编辑吗？" data-close="">取消编辑</button>
     </div>
-</form>
+</form> 
 <script>
     if (typeof layui !== 'undefined') {
         var form = layui.form,
@@ -52,8 +52,8 @@
 <script>
     $(function () {
         var parentIndex = parent.layer.getFrameIndex(window.name); //获取窗口索引
-        $('form').submit(function () {
-            $.post('/admin/admin/edit',fromToJson($('form')),function (response) {
+        $('#submit').click(function () {
+            $.post('/admin/admin/edit',formToJson($('form')),function (response) {
                 consoel.log(response);
                 if(response.code==1){
                     layer.msg(response.msg,{
