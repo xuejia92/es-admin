@@ -53,8 +53,7 @@
     $(function () {
         var parentIndex = parent.layer.getFrameIndex(window.name); //获取窗口索引
         $('#submit').click(function () {
-            $.post('/admin/admin/edit',formToJson($('form')),function (response) {
-                consoel.log(response);
+            $.post('/admin/admin/edit',formToJson($('form')),function (response) { 
                 if(response.code==1){
                     layer.msg(response.msg,{
                         icon:1,
