@@ -100,7 +100,7 @@
 					{if $vo.status eq 1 }
 					<span class="text-explode">|</span>
 					<a data-update="{$vo.id}" data-field='status' data-value='0' onclick="confirmMsg('/admin/admin/forbid?id={$vo.id}&status=0','确认禁用吗')">禁用</a>
-					{elseif}
+					{else}
 					<span class="text-explode">|</span>
 					<a data-update="{$vo.id}" data-field='status' data-value='1' onclick="confirmMsg('/admin/admin/forbid?id={$vo.id}&status=1','确认启用吗')">启用</a>
 					{/if}
