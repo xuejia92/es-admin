@@ -38,7 +38,7 @@ class SystemUser extends Model {
          $data['phone']=$postData['phone'];
          $data['mail']=$postData['mail'];
          $data['desc']=$postData['desc'];
-         $res = $this->where("id=".$postData['id'])->save($data);
+         $res = $this->where("id",$postData['id'])->save($data);
          if(false !== $res){
             return true;
          }else{
