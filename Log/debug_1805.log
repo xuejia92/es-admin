@@ -82,3 +82,54 @@ Stack trace:
 18-05-20 22:24:24:Error at file[/media/sf_www/es-admin/Temp/templates_c/90e2511548d7d1a5838f9deff480f64e.php] line[847] message:[Undefined variable: classuri]
 18-05-20 22:24:24:Error at file[/media/sf_www/es-admin/Temp/templates_c/90e2511548d7d1a5838f9deff480f64e.php] line[851] message:[Undefined variable: classuri]
 18-05-20 22:24:24:Error at file[/media/sf_www/es-admin/Temp/templates_c/90e2511548d7d1a5838f9deff480f64e.php] line[853] message:[Undefined variable: classuri]
+18-05-28 21:23:27:Error at file[/media/sf_www/es-admin/vendor/easyswoole/easyswoole/src/Core/Swoole/ServerManager.php] line[115] message:[Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9501]. Error: Address already in use[98]. in /media/sf_www/es-admin/vendor/easyswoole/easyswoole/src/Core/Swoole/ServerManager.php:115
+Stack trace:
+#0 /media/sf_www/es-admin/vendor/easyswoole/easyswoole/src/Core/Swoole/ServerManager.php(115): Swoole\Server->__construct('0.0.0.0', 9501, 3, 1)
+#1 /media/sf_www/es-admin/vendor/easyswoole/easyswoole/src/Core/Swoole/ServerManager.php(61): EasySwoole\Core\Swoole\ServerManager->createMainServer()
+#2 /media/sf_www/es-admin/vendor/easyswoole/easyswoole/src/Core/Core.php(45): EasySwoole\Core\Swoole\ServerManager->start()
+#3 /media/sf_www/es-admin/vendor/easyswoole/easyswoole/bin/easyswoole(322): EasySwoole\Core\Core->run()
+#4 /media/sf_www/es-admin/vendor/easyswoole/easyswoole/bin/easyswoole(24): serverStart(Array)
+#5 /media/sf_www/es-admin/vendor/easyswoole/easyswoole/bin/easyswoole(458): commandHandler()
+#6 /media/sf_www/es-admin/easyswoole(2): require('/media/sf_www/e...')
+#7 {main}
+  thrown]
+18-05-28 23:03:22:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:03:41:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:03:45:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:03:47:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:05:04:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:05:48:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:06:03:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:06:09:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:07:37:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:08:44:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:09:42:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:10:32:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:11:25:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:15:15:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:16:14:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:16:30:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:19:00:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:19:09:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:19:28:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:20:00:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:20:05:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:21:39:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:23:30:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:25:13:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:29:11:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:29:23:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:31:26:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:32:28:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:33:06:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:33:55:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:35:09:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:35:52:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:36:42:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:37:44:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:37:46:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:37:49:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:37:58:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:38:00:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:38:27:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]
+18-05-28 23:39:01:Error at file[/media/sf_www/es-admin/Temp/templates_c/2c0c40c294d63210e5c7e6b01dd91ded.php] line[6] message:[Undefined variable: title]

@@ -16,3 +16,14 @@
 [2018-05-19 13:30:29 $3113.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
 [2018-05-19 18:57:01 *24800.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Cannot declare class App\HttpController\Admin\Index, because the name is already in use in /media/sf_www/es-admin/App/HttpController/Admin/Menu.php on line 18.
 [2018-05-19 18:57:01 $24788.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2018-05-27 23:01:16 *1892.7]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2018-05-27 23:01:16 *1891.6]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2018-05-27 23:01:16 *1890.5]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2018-05-27 23:01:16 *1889.4]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2018-05-27 23:01:16 *1888.3]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2018-05-27 23:01:16 *1887.2]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2018-05-27 23:01:16 *1886.1]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2018-05-27 23:01:16 *1885.0]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2018-05-27 23:01:16 $1875.0]	WARNING	swSignal_callback: signal[1] callback is null.
+[2018-05-27 23:01:16 $1875.0]	WARNING	swManager_check_exit_status: worker#16 abnormal exit, status=0, signal=1
+[2018-05-27 23:01:16 #1874.1]	WARNING	swSignalfd_onSignal: signal[1] callback is null.

@@ -87,7 +87,7 @@
 
 					{if auth("$classuri/edit")}
 					<span class="text-explode">|</span>
-					<a data-title="编辑用户" data-modal='{:url("$classuri/edit")}?id={$vo.id}'>编辑</a>
+					<a data-title="编辑用户" class="editUserOpen">编辑</a>
 					{/if}
 
 					{if auth("$classuri/auth")}
@@ -121,7 +121,7 @@
 		{if isset($page)}<p>{$page|raw}</p>{/if}
 		<!--{/empty}-->
 	</form>
-	<script src="__STATIC__/admin_bak.js"></script>
+	<!--<script src="__STATIC__/admin_bak.js"></script>-->
 	<script>
 		$(function () {
 			$('#saveCon').submit(function () {
@@ -164,6 +164,10 @@
 					//请求异常回调
 				}
 			});
+
+			$('.editUserOpen').click(function () {
+			    editOpen("用户编辑",'/admin/layer/user_edit')
+            });
 		});
 	</script>
 {/block}

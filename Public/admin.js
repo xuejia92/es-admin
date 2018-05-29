@@ -13,8 +13,6 @@
 /**
  * jQuery后台初始化
  * @version 1.0
- * @date 2018/02/03
- * @author Anyon <zoujingli@qq.com>
  */
 if (typeof layui !== 'undefined') {
     var form = layui.form,
@@ -51,3 +49,15 @@ function formToJson($form) {
      });
     return o;
 }
+
+function editOpen(title,$formHtml){
+    var index=layer.open({
+        type: 2,
+        title: title,
+        shadeClose: true,
+        shade: 0.8,
+        area: ['800px', '500px'],
+        content: $formHtml
+    });
+}
+

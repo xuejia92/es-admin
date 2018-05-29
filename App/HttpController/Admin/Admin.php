@@ -38,9 +38,8 @@ class Admin extends BasicAdmin {
         }
     }
 
-    public function edit()
-    {
-        return $this->_form($this->table, 'form');
+    public function edit(){
+
     }
 
 

@@ -1,4 +1,4 @@
-<?php /*a:7:{s:54:"/media/sf_www/es-admin/App/Views/admin/admin/user.html";i:1526826786;s:49:"/media/sf_www/es-admin/App/Views/public/base.html";i:1526806933;s:51:"/media/sf_www/es-admin/App/Views/public/header.html";i:1526807008;s:48:"/media/sf_www/es-admin/App/Views/public/top.html";i:1526808943;s:49:"/media/sf_www/es-admin/App/Views/public/left.html";i:1526824136;s:53:"/media/sf_www/es-admin/App/Views/public/main_nav.html";i:1526804802;s:51:"/media/sf_www/es-admin/App/Views/public/bottom.html";i:1526826704;}*/ ?>
+<?php /*a:7:{s:54:"/media/sf_www/es-admin/App/Views/admin/admin/user.html";i:1527519363;s:49:"/media/sf_www/es-admin/App/Views/public/base.html";i:1526806933;s:51:"/media/sf_www/es-admin/App/Views/public/header.html";i:1526807008;s:48:"/media/sf_www/es-admin/App/Views/public/top.html";i:1526808943;s:49:"/media/sf_www/es-admin/App/Views/public/left.html";i:1526824136;s:53:"/media/sf_www/es-admin/App/Views/public/main_nav.html";i:1526804802;s:51:"/media/sf_www/es-admin/App/Views/public/bottom.html";i:1526826704;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -835,7 +835,7 @@
 
 					<?php if(auth("$classuri/edit")): ?>
 					<span class="text-explode">|</span>
-					<a data-title="编辑用户" data-modal='<?php echo url("$classuri/edit"); ?>?id=<?php echo htmlentities($vo['id']); ?>'>编辑</a>
+					<a data-title="编辑用户" class="editUserOpen">编辑</a>
 					<?php endif; if(auth("$classuri/auth")): ?>
 					<span class="text-explode">|</span>
 					<a data-title="用户授权" data-modal='<?php echo url("$classuri/auth"); ?>?id=<?php echo htmlentities($vo['id']); ?>'>授权</a>
@@ -861,7 +861,7 @@
 		<?php if(isset($page)): ?><p><?php echo $page; ?></p><?php endif; ?>
 		<!--<?php endif; ?>-->
 	</form>
-<script src="/admin_bak.js"></script>
+	<!--<script src="/admin_bak.js"></script>-->
 	<script>
 		$(function () {
 			$('#saveCon').submit(function () {
@@ -904,6 +904,10 @@
 					//请求异常回调
 				}
 			});
+
+			$('.editUserOpen').click(function () {
+			    editOpen("用户编辑",'/admin/layer/user_edit')
+            });
 		});
 	</script>
 
