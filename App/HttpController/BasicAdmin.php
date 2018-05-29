@@ -20,6 +20,7 @@ class BasicAdmin extends ViewController
     {
         $this->session()->sessionStart();
         $session = $this->session()->get(SysConst::COOKIE_USER_SESSION_NAME);  
+        $this->response()->write($session);
         if (!$session) {
             $this->response()->redirect('/admin/login/index');
             return false;
