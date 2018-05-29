@@ -20,6 +20,7 @@ class BasicAdmin extends ViewController
     {
         $this->session()->sessionStart();
         $session = $this->session()->get(SysConst::COOKIE_USER_SESSION_NAME);
+        var_dump($session);
         if (!$session) {
             $this->response()->redirect('/admin/login/index');
             return false;
@@ -40,6 +41,7 @@ class BasicAdmin extends ViewController
             'wait'=>$time_out
         ];
         $this->response()->write(json_encode($json_data,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));
+        $this->response()->end();
     }
 
     public function _list($db,$where,$result=[]){
