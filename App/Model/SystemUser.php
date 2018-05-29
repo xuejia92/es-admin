@@ -46,4 +46,15 @@ class SystemUser extends Model {
          }
     }
 
+    public function pass($postData) {
+        $data=[];
+        $data['password']   = md5($postData['password']); 
+        $res = $this->where("id",$postData['id'])->update($data);
+        if(false !== $res){
+           return true;
+        }else{
+            return false;
+        }
+   }
+
 }

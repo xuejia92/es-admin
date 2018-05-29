@@ -15,7 +15,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label">联系邮箱</label>
         <div class="layui-input-block">
-            <input name="mail" pattern="^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$" value="{$result.mail}" title="请输入联系邮箱" placeholder="请输入联系邮箱" class="layui-input" />
+            <input name="mail"  value="{$result.mail}" title="请输入联系邮箱" placeholder="请输入联系邮箱" class="layui-input" />
         </div>
     </div>
     <div class="layui-form-item">
@@ -34,7 +34,7 @@
     </div>
     <div class="hr-line-dashed"></div>
     <div class="layui-form-item text-center">
-        <input type="hidden" value="10000" name="id" />
+        <input type="hidden" value="{$result.id}" name="id" />
         <button class="layui-btn" type="submit" id='submit'>保存数据</button>
         <button class="layui-btn layui-btn-danger" type="button" id="close" data-confirm="确定要取消编辑吗？" data-close="">取消编辑</button>
     </div>

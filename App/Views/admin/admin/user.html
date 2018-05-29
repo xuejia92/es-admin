@@ -97,7 +97,7 @@
 
 					{if auth("$classuri/pass")}
 					<span class="text-explode">|</span>
-					<a data-title="设置密码" data-modal='{:url("$classuri/pass")}?id={$vo.id}'>密码</a>
+					<a data-title="设置密码"  onclick='editOpen("设置密码","/admin/layer/pass?id={$vo.id}")'>密码</a>
 					{/if}
 
 					{if $vo.status eq 1 and auth("$classuri/forbid")}

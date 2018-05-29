@@ -56,5 +56,28 @@ class Admin extends BasicAdmin {
         } 
     }
 
+    public function pass(){
+        if (!$this->request()->getParsedBody()) {
+            $this->ajax(0,"非法请求");
+        }else{
+            $sysUser = new SystemUser();
+            $postData = $this->request()->getParsedBody();
+            if($postData){
+                if($postData['password']!=$postData['repossward']){
+                    $this->ajax(0,"两次密码输入不一致");
+                }else{
+                    if($sysUser->pass($postData)){
+                        $this->ajax(1,"更新成功",'','/admin/admin/user');
+                    }else{
+                        $this->ajax(0,"更新密码失败");
+                    } 
+                }
+               
+            }else{
+                $this->ajax(0,"请求数据为空");
+            } 
+        } 
+    }
+
 
 }
