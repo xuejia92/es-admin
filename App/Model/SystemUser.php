@@ -58,14 +58,25 @@ class SystemUser extends Model {
    }
 
    public function forbid($postData) {
-    $data=[];
-    $data['status']   = $postData['status']; 
-    $res = $this->where("id",$postData['id'])->update($data);
-    if(false !== $res){
-       return true;
-    }else{
-        return false;
+        $data=[];
+        $data['status']   = $postData['status']; 
+        $res = $this->where("id",$postData['id'])->update($data);
+        if(false !== $res){
+        return true;
+        }else{
+            return false;
+        }
     }
-}
+
+    public function delete($postData) {
+        $data=[];
+        $data['is_deleted']   = $postData['is_deleted'];  
+        $res = $this->where("id",$postData['id'])->update($data);
+        if(false !== $res){
+        return true;
+        }else{
+            return false;
+        }
+    }
 
 }

@@ -100,4 +100,29 @@ class Admin extends BasicAdmin {
     }
 
 
+    public function delete(){
+        if (!$this->request()->getQueryParams()) {
+            $this->ajax(0,"非法请求");
+        }else{
+            $sysUser = new SystemUser();
+            $postData = $this->request()->getQueryParams();
+            if($postData){
+                $this->session()->sessionStart();
+                $user = $this->session()->get(SysConst::COOKIE_USER_SESSION_NAME);
+                if($user['id']==$postData['id']){
+                    $this->ajax(0,"不能删除自己，操作失败");
+                }else{
+                    if($sysUser->delete($postData)){
+                        $this->ajax(1,"操作成功",'','/admin/admin/user');
+                    }else{
+                        $this->ajax(0,"操作失败");
+                    } 
+                } 
+               
+            }else{
+                $this->ajax(0,"操作失败");
+            } 
+        } 
+    }
+
 }
