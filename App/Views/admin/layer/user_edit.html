@@ -53,7 +53,7 @@
     $(function () {
         var parentIndex = parent.layer.getFrameIndex(window.name); //获取窗口索引
         $('form').submit(function () {
-            $.post('/admin/admin/edit',sendData.data,function (response) {
+            $.post('/admin/admin/edit',fromToJson($('form')),function (response) {
                 if(response.code==1){
                     layer.msg(response.msg,{
                         icon:1,
@@ -72,10 +72,8 @@
         },'json');
 
         $('#close').click(function () {
-            layer.msg('ffff',{
-                icon:2,
-                time:2000
-            });
+            parent.layer.close(index);
+            // parent.location.href = parent.location.href;
         });
     });
 </script>

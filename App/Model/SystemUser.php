@@ -33,4 +33,8 @@ class SystemUser extends Model {
         return Helper::returnBoolWithMsg(true,'登录成功，正在进入系统...',$user);
     }
 
+    public function editUser($postData) {
+         
+    }
+
 }

@@ -39,7 +39,23 @@ class Admin extends BasicAdmin {
     }
 
     public function edit(){
-
+        if (!$this->request()->getParsedBody()) {
+            $this->ajax(0,"非法请求",'','/admin/admin/user');
+        }else{
+            $sysUser = new SystemUser();
+            $postData = $this->request()->getParsedBody();
+            if($postData){
+                if($sysUser->editUser($postData)){
+                    $this->ajax(1,"请求数据为空",'','/admin/admin/user');
+                }else{
+                    $this->ajax(0,"更新数据失败 ",'','/admin/admin/user');
+                } 
+            }else{
+                $this->ajax(0,"请求数据为空",'','/admin/admin/user');
+            }
+            
+            $this->ajax(1,"信息更新成功",'','/admin/system/config');
+        } 
     }
 
 
