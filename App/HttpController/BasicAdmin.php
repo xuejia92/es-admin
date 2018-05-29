@@ -14,7 +14,8 @@ class BasicAdmin extends ViewController
 
     public $title;
     public $table;
-
+    
+   
     protected function onRequest($action): ?bool
     {
         $this->session()->sessionStart();
